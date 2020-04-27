@@ -63,8 +63,8 @@ def create_app(test_config=None):
         if body is None:
             abort(400)
 
-            new_movie_title = body.get('title', None)
-            new_movie_release_date = body.get('release_date', None)
+        new_movie_title = body.get('title', None)
+        new_movie_release_date = body.get('release_date', None)
 
         try:
             movie = Movie(title=new_movie_title, release_date=new_movie_release_date)
